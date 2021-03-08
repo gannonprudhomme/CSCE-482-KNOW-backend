@@ -14,3 +14,8 @@ pytest-django = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+# We add the --rc-file so that pylint will throw an error if we're in the wrong folder
+# Note that you must run this in the first know/ folder
+lint = "pylint --load-plugins pylint_django know/know --django-settings-module=know.know.settings --rc-file=.pylintrc"
