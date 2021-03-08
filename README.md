@@ -10,6 +10,26 @@
 
 3. `pipenv install`
 
+4. `python manage.py know/runserver`
+
+5. You can now navigate to localhost:8000/ and see the server running!
+
+## Setup
+
+We'll be using pylint to lint the project.
+
+## Running linting
+
+1. `cd know/`
+
+2. `pipenv run lint`
+
+## Run tests
+
+1. `cd know/`
+
+2. `pipenv run test` or `pytest`
+
 ## Troubleshooting
 
 ### Pipenv is not found
