@@ -11,6 +11,6 @@ jobs:
         uses: cclauss/GitHub-Action-for-pylint@master
         with:
         # Installs Django and pylint-django, then runs pylint on all of the files in autoscheduler/
-          args: pip install -r .github/lint-requirements.txt ; pylint know/know know/rdf --load-plugins pylint_django --rcfile=know/.pylintrc --django-settings-module=know.know.settings
+          args: pip install -r .github/lint-requirements.txt ; pylint know/know know/rdf --load-plugins pylint_django --rcfile=know/.pylintrc --django-settings-module=know.settings
 
   # TODO - add backend testing (using Docker)
