@@ -1,0 +1,16 @@
+name: Backend CI
+on: push
+
+jobs:
+  lint-backend:
+    name: 'Linting'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: pylint
+        uses: cclauss/GitHub-Action-for-pylint@master
+        with:
+        # Installs Django and pylint-django, then runs pylint on all of the files in autoscheduler/
+          args: pip install pipenv; pipenv install ; pipenv run lint
+
+  # TODO - add backend testing (using Docker)
