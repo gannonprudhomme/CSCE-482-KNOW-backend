@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'know.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
+        # pylint: disable=line-too-long
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {

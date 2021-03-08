@@ -2,9 +2,9 @@
 
 ## Install
 
-0. Clone the repository
+0. Clone the repository - `git clone https://github.com/gannonprudhomme/CSCE-482-KNOW-Backend.git/`
 
-1. Install Python 3.7
+1. Install Python 3.7 from [here](https://www.python.org/downloads/)
 
 2. `pip install --user pipenv`
 
