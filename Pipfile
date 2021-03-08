@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
+
+[dev-packages]
 pylint = "*"
 pytest = "*"
 pylint-django = "*"
 pytest-django = "*"
-
-[dev-packages]
 
 [requires]
 python_version = "3.7"
