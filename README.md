@@ -30,6 +30,10 @@ We'll be using pylint to lint the project.
 
 2. `pipenv run test` or `pytest`
 
+## Setup pylint in VSCode
+
+I have instructions from a previous project (that has an identical tech stack) for setting up pylint to automatically lint in VSCode [here](https://github.com/aggie-coding-club/Rev-Registration/wiki/Setup-Pylint).
+
 ## Troubleshooting
 
 ### Pipenv is not found
