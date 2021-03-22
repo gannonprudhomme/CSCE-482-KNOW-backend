@@ -10,9 +10,11 @@
 
 3. `pipenv install`
 
-4. `python manage.py know/runserver`
+4. `pipenv shell`
 
-5. You can now navigate to localhost:8000/ and see the server running!
+5. `python know/manage.py runserver`
+
+6. You can now navigate to localhost:8000/ and see the server running!
 
 ## Setup
 
