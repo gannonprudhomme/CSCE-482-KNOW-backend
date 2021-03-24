@@ -8,7 +8,7 @@
 
 2. `pip install --user pipenv`
 
-3. `pipenv install`
+3. `pipenv install --dev`
 
 4. `pipenv shell`
 
