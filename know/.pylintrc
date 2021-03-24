@@ -125,7 +125,7 @@ unsafe-load-any-extension=no
 
 
 [MESSAGES CONTROL]
-
+disable=duplicate-code
 # Only show warnings with the listed confidence levels. Leave empty to show
 # all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
 confidence=
