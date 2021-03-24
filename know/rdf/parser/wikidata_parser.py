@@ -1,5 +1,5 @@
 
-from abstract_parser import AbstractParser
+from .abstract_parser import AbstractParser
 
 class WikidataParser(AbstractParser):
     """parses wikidata sources"""
