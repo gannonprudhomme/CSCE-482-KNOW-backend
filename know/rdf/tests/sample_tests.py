@@ -1,11 +1,12 @@
 import unittest
 
 def some_function(val):
+    """ some basic function """
     return val
 
 class SampleTestCase(unittest.TestCase):
     """ Sample test case """
-    def __init__(self):
+    def setUp(self):
         # You can optionally setup things here that can be used in the rest of the tests
         pass
 
@@ -13,7 +14,7 @@ class SampleTestCase(unittest.TestCase):
         """ Typical test name format is like test_thing_in_situation_does_thing
             e.g., test_invalid_uri_does_raise_error
         """
-        
+
         # arrange
         expected = 5
 
