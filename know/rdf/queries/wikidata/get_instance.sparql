@@ -1,0 +1,5 @@
+SELECT ?entity ?desc {
+  $0 p:P674 [ps:P674 ?entity]
+  OPTIONAL { ?entity rdfs:label ?desc FILTER((LANG(?desc)) = "en") }
+}
+# replace $0 with the given wikidata identifier to query the "instance of"
