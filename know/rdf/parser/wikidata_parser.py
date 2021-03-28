@@ -1,4 +1,4 @@
-# pylint: disable=no-self-use,unused-import
+# pylint: disable=no-self-use,unused-import,
 import re
 from abstract_parser import AbstractParser, EntityType
 class WikidataParser(AbstractParser):

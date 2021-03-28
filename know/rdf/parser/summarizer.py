@@ -1,5 +1,5 @@
-from .wikidata_parser import WikidataParser
-from .viaf_parser import ViafParser
+from wikidata_parser import WikidataParser
+from viaf_parser import ViafParser
 class Summarizer:
     """ Returns summarizing information for any source """
 
