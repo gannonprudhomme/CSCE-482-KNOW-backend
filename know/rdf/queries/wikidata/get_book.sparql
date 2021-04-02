@@ -1,0 +1,10 @@
+# Replace $0 with book entry 
+SELECT ?title ?author ?authorLabel ?genre ?genreLabel ?published
+WHERE
+{
+  wd:$0 wdt:P1476 ?title;
+             wdt:P50 ?author;
+             wdt:P136 ?genre;
+             wdt:P577 ?published.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+}
