@@ -1,18 +1,18 @@
-import requests
 import sys
 import os
 
-def read(queryFile, uri):
-    relativePath = sys.path[0]
-    pathName = os.path.join(relativePath, "rdf", "queries", "wikidata", queryFile)
-    queryString = ""
-    f = open(pathName, "r")
-    for x in f:
-        if x.find("#") == -1:
-            if x.find("$0") != -1:
-                queryString += x.replace("$0", "wd:" + uri)
+
+def read(query_file, uri):
+    """ Reads the .sparql file and replaces $0 with the uri """
+    relative_path = sys.path[0]
+    path_name = os.path.join(relative_path, "rdf", "queries", "wikidata", query_file)
+    query_string = ""
+    query_input = open(path_name, "r")
+    for line in query_input:
+        if line.find("#") == -1:
+            if line.find("$0") != -1:
+                query_string += line.replace("$0", "wd:" + uri)
             else:
-                queryString += x
-    print(queryString)
-    r = requests.get('https://query.wikidata.org/sparql', params = {'format': 'json', 'query': queryString})
-    print(r.json())
+                query_string += line
+    print(query_string)
+    return query_string

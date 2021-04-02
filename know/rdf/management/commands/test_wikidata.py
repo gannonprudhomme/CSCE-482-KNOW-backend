@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+import requests
 from rdf.parser.sparql_reader import read
 
 class Command(BaseCommand):
@@ -17,5 +18,8 @@ class Command(BaseCommand):
             raise Exception("please pass a query")
 
         uri = options['uri']
-        read(query,uri)
+        query_string = read(query,uri)
+        query_params = {'format': 'json', 'query': query_string}
+        query_request = requests.get('https://query.wikidata.org/sparql', query_params)
+        print(query_request.json())
         print(f"Passed in test_wikidata query: {query} and uri: {uri}")
