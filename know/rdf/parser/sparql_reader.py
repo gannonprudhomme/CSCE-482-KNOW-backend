@@ -11,7 +11,7 @@ def read(query_file, uri):
     for line in query_input:
         if line.find("#") == -1:
             if line.find("$0") != -1:
-                query_string += line.replace("$0", "wd:" + uri)
+                query_string += line.replace("$0", uri)
             else:
                 query_string += line
     print(query_string)
