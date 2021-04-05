@@ -1,5 +1,5 @@
 import unittest
-from rdf.parser.sparql_reader import read
+from rdf.parser.sparql_reader import read_sparql
 
 
 class ReadTest(unittest.TestCase):
@@ -9,8 +9,8 @@ class ReadTest(unittest.TestCase):
         pass
 
     def test_read_replaces_0(self):
-        """ Typical test name format is like test_thing_in_situation_does_thing
-            e.g., test_invalid_uri_does_raise_error
+        """ test_read_replaces_0 will check that read_sparql will
+            replace the $0 in the file with a test uri
         """
 
         # arrange
@@ -20,7 +20,7 @@ class ReadTest(unittest.TestCase):
           "  FILTER((LANG(?label)) = \"en\")\n}\n")
 
         # act
-        actual = read("get_instance.sparql", "Q41513")
+        actual = read_sparql("get_instance.sparql", "Q41513")
 
         # assert
         self.assertEqual(expected, actual)

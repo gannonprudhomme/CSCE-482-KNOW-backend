@@ -2,7 +2,7 @@ import sys
 import os
 
 
-def read(query_file, uri):
+def read_sparql(query_file: str, uri: str) -> str:
     """ Reads the .sparql file and replaces $0 with the uri """
     relative_path = sys.path[0]
     path_name = os.path.join(relative_path, "rdf", "queries", "wikidata", query_file)
@@ -14,5 +14,4 @@ def read(query_file, uri):
                 query_string += line.replace("$0", uri)
             else:
                 query_string += line
-    print(query_string)
     return query_string
