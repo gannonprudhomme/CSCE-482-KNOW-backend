@@ -2,8 +2,8 @@ import unittest
 from rdf.parser.sparql_reader import read_sparql
 
 
-class ReadTest(unittest.TestCase):
-    """ Sample test case """
+class ReadSparqlTests(unittest.TestCase):
+    """ read_sparql tests """
     def setUp(self):
         # You can optionally setup things here that can be used in the rest of the tests
         pass
