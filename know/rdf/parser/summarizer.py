@@ -1,7 +1,7 @@
 import re
 import rdflib
-from wikidata_parser import WikidataParser
 from rdflib import Namespace
+from rdf.parser.wikidata_parser import WikidataParser
 class Summarizer:
     """ Returns summarizing information for any source """
 
@@ -39,11 +39,14 @@ class Summarizer:
         """
         graph = rdflib.Graph()
         graph.parse(self.uri)
+
         viaf_uri_base = "http://viaf.org/viaf/"
         entity_id = re.search('[0-9]+', self.uri).group(0)
         viaf_entity = rdflib.URIRef(viaf_uri_base + entity_id)
+
         schema = Namespace('http://schema.org/')
         for _, __, obj in graph.triples((viaf_entity, schema.sameAs, None)):
             if 'wikidata' in str(obj):
                 return str(obj)
+
         raise Exception("Couldn't find associated wikidata URI!")
