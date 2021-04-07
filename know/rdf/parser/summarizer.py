@@ -1,5 +1,10 @@
-from wikidata_parser import WikidataParser
-from viaf_parser import ViafParser
+import re
+import rdflib
+from rdflib import Namespace
+from rdf.parser.wikidata_parser import WikidataParser
+class NoWikidataException(Exception):
+    """ Exception raised when Summarizer.get_wikidata_uri can't find a wikidata URI.
+    """
 class Summarizer:
     """ Returns summarizing information for any source """
 
@@ -14,8 +19,9 @@ class Summarizer:
             wiki_parser = WikidataParser(self.uri)
             return wiki_parser.parse()
         if self.valid_viaf():
-            viaf_parser = ViafParser(self.uri)
-            return viaf_parser.parse()
+            wikidata_uri = self.get_wikidata_uri()
+            wiki_parser = WikidataParser(wikidata_uri)
+            return wiki_parser.parse()
         return None
 
     def valid_wikidata(self):
@@ -29,3 +35,21 @@ class Summarizer:
             Otherwise returns false
         """
         return 'viaf' in self.uri
+
+    def get_wikidata_uri(self):
+        """ Parse viaf rdf file and search for a wikidata
+            resource that is the 'sameAs' the given one.
+        """
+        graph = rdflib.Graph()
+        graph.parse(self.uri) #loads rdf triples in rdf data from uri into the graph
+
+        viaf_uri_base = "http://viaf.org/viaf/"
+        entity_id = re.search('[0-9]+', self.uri).group(0)
+        viaf_entity = rdflib.URIRef(viaf_uri_base + entity_id)
+
+        schema = Namespace('http://schema.org/')
+        for _, __, obj in graph.triples((viaf_entity, schema.sameAs, None)):
+            if 'wikidata' in str(obj):
+                return str(obj)
+
+        raise NoWikidataException("Couldn't find associated wikidata URI!")

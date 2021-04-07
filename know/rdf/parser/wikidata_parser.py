@@ -1,6 +1,6 @@
 # pylint: disable=no-self-use,unused-import,
 import re
-from abstract_parser import AbstractParser, EntityType
+from rdf.parser.abstract_parser import AbstractParser, EntityType
 class WikidataParser(AbstractParser):
     """parses wikidata sources"""
 
