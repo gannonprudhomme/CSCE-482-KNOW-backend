@@ -38,7 +38,7 @@ class Summarizer:
             resource that is the 'sameAs' the given one.
         """
         graph = rdflib.Graph()
-        graph.parse(self.uri)
+        graph.parse(self.uri) #loads rdf triples in rdf data from uri into the graph
 
         viaf_uri_base = "http://viaf.org/viaf/"
         entity_id = re.search('[0-9]+', self.uri).group(0)
