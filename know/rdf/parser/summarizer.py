@@ -2,6 +2,9 @@ import re
 import rdflib
 from rdflib import Namespace
 from rdf.parser.wikidata_parser import WikidataParser
+class NoWikidataException(Exception):
+    """ Exception raised when Summarizer.get_wikidata_uri can't find a wikidata URI.
+    """
 class Summarizer:
     """ Returns summarizing information for any source """
 
@@ -49,4 +52,4 @@ class Summarizer:
             if 'wikidata' in str(obj):
                 return str(obj)
 
-        raise Exception("Couldn't find associated wikidata URI!")
+        raise NoWikidataException("Couldn't find associated wikidata URI!")
