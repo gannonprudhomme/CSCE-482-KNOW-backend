@@ -1,6 +1,4 @@
 #!/bin/sh
 export DJANGO_SETTINGS_MODULE=know.settings
-pwd
-ls
-cd know/
+cd know/ # Must be in the first know/ directory to run the tests
 pipenv run test

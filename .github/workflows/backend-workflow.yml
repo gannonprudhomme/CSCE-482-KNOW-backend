@@ -13,4 +13,10 @@ jobs:
         # Installs Django and pylint-django, then runs pylint on all of the files in autoscheduler/
           args: pip install -r .github/lint-requirements.txt ; pylint know/know know/rdf --load-plugins pylint_django --rcfile=know/.pylintrc --django-settings-module=know.settings
 
-  # TODO - add backend testing (using Docker)
+  test-backend:
+    name: 'Testing'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: docker-build
+        run: docker-compose up --build --abort-on-container-exit
