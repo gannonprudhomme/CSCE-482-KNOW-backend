@@ -5,7 +5,6 @@ class EntityType(Enum):
     """ The enum that holds entity types for easy access """
     PERSON = 1
     BOOK = 2
-    PAINTING = 3
 
 class AbstractParser(ABC):
     """ The base class for implementing a parser for a particular source"""
@@ -27,5 +26,5 @@ class AbstractParser(ABC):
         """ Parse a person """
 
     @abstractmethod
-    def parse_work_of_art(self) -> dict:
-        """ Parse a work of art """
+    def parse_book(self) -> dict:
+        """ Parse a book """

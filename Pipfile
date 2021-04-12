@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 rdflib = "*"
 requests = "*"
+qwikidata = "*"
 
 [dev-packages]
 pylint = "*"
