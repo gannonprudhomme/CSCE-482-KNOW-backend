@@ -6,7 +6,6 @@ SELECT ?name ?description ?TerritoryLocation ?TerritoryLocationLabel ?CountryLoc
   OPTIONAL { ?entity wdt:P131 ?TerritoryLocation. }
   OPTIONAL { ?entity wdt:P17 ?CountryLocation. }
   OPTIONAL { ?entity wdt:P571 ?inception. }
-  OPTIONAL { ?entity wdt:P8687 ?SocialMediaFollowers. }
   OPTIONAL { ?entity wdt:P625 ?coordinates. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
