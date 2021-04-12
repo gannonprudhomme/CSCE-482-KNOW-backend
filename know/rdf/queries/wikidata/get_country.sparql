@@ -1,0 +1,11 @@
+SELECT ?name ?population ?continent ?continentLabel ?capital ?capitalLabel ?AreaKmSquared ?HeadOfGov ?HeadOfGovLabel ?HeadOfState ?HeadOfStateLabel WHERE {
+  BIND(wd:$0 AS ?entity)
+  OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
+  OPTIONAL { ?entity wdt:P1082 ?population. }
+  OPTIONAL { ?entity wdt:P30 ?continent. }
+  OPTIONAL { ?entity wdt:P36 ?capital. }
+  OPTIONAL { ?entity wdt:P2046 ?AreaKmSquared. }
+  OPTIONAL { ?entity wdt:P6 ?HeadOfGov. }
+  OPTIONAL { ?entity wdt:P35 ?HeadOfState. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
