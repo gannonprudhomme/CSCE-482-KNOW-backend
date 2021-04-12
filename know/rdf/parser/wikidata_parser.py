@@ -19,7 +19,7 @@ class WikidataParser(AbstractParser):
             return self.parse_book()
         if entity_type == EntityType.PERSON:
             return self.parse_person()
-        raise Exception("Unsupported entity type!") # pylint: disable=inconsistent-return-statements
+        raise Exception("Unsupported entity type!")
     def get_entity_type(self) -> str:
         "gets the entity type"
         query = read_sparql("get_instance.sparql", self.entity_id)
