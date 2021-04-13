@@ -1,4 +1,4 @@
-# Replace $0 with country entity id
+# Replace $0 with book entity id
 SELECT ?name ?description ?authorLabel ?genreLabel ?published WHERE {
   BIND(wd:Q74287 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
