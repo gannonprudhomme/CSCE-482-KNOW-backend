@@ -1,12 +1,10 @@
-# Replace $0 with book entry 
-SELECT ?title ?description ?author ?authorLabel ?genre ?genreLabel ?published
-WHERE
-{
-	BIND(wd:$0 AS ?entity)
-	OPTIONAL { ?entity rdfs:label ?title. filter (lang(?title) = "en")}
-	OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
-	OPTIONAL { ?entity wdt:P50 ?author. }
-    OPTIONAL { ?entity wdt:P136 ?genre. }         
-    OPTIONAL { ?entity wdt:P577 ?published. }         
-    SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+# Replace $0 with book entity id
+SELECT ?name ?description ?authorLabel ?genreLabel ?published WHERE {
+  BIND(wd:$0 AS ?entity)
+  OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
+  OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
+  OPTIONAL { ?entity wdt:P50 ?author. }
+  OPTIONAL { ?entity wdt:P136 ?genre. }
+  OPTIONAL { ?entity wdt:P577 ?published. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }

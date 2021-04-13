@@ -1,13 +1,13 @@
-# Replace $0 with name entry 
-SELECT ?name ?description ?population ?continent ?continentLabel ?capital ?capitalLabel ?AreaKmSquared ?HeadOfGov ?HeadOfGovLabel ?HeadOfState ?HeadOfStateLabel WHERE {
+# Replace $0 with country entity id
+SELECT ?name ?description ?population ?continentLabel ?capitalLabel ?areaKmSquared ?headOfGovLabel ?headOfStateLabel WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
   OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
   OPTIONAL { ?entity wdt:P1082 ?population. }
   OPTIONAL { ?entity wdt:P30 ?continent. }
   OPTIONAL { ?entity wdt:P36 ?capital. }
-  OPTIONAL { ?entity wdt:P2046 ?AreaKmSquared. }
-  OPTIONAL { ?entity wdt:P6 ?HeadOfGov. }
-  OPTIONAL { ?entity wdt:P35 ?HeadOfState. }
+  OPTIONAL { ?entity wdt:P2046 ?areaKmSquared. }
+  OPTIONAL { ?entity wdt:P6 ?headOfGov. }
+  OPTIONAL { ?entity wdt:P35 ?headOfState. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
