@@ -7,6 +7,9 @@ name = "pypi"
 django = "*"
 rdflib = "*"
 requests = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+python-dateutil = "*"
 
 [dev-packages]
 pylint = "*"
