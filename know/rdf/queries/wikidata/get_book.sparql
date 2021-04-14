@@ -6,5 +6,5 @@ WHERE
              wdt:P50 ?author;
              wdt:P136 ?genre;
              wdt:P577 ?published.
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
