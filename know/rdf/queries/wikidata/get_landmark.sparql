@@ -1,0 +1,11 @@
+# Replace $0 with landmark entity id
+SELECT ?name ?description ?territoryLocationLabel ?countryLocationLabel ?inception ?coordinates WHERE {
+  BIND(wd:$0 AS ?entity)
+  OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
+  OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
+  OPTIONAL { ?entity wdt:P131 ?territoryLocation. }
+  OPTIONAL { ?entity wdt:P17 ?countryLocation. }
+  OPTIONAL { ?entity wdt:P571 ?inception. }
+  OPTIONAL { ?entity wdt:P625 ?coordinates. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}

@@ -1,7 +1,8 @@
-# Replace $0 with name entry 
-SELECT ?name ?birthDate ?deathDate ?spouse ?spouseLabel ?nationality ?nationalityLabel ?occupation ?occupationLabel WHERE {
+# Replace $0 with person entity id 
+SELECT ?name ?description ?birthDate ?deathDate ?spouseLabel ?nationalityLabel ?occupationLabel WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
+  OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
   OPTIONAL { ?entity wdt:P569 ?birthDate. }
   OPTIONAL { ?entity wdt:P570 ?deathDate. }
   OPTIONAL { ?entity wdt:P26 ?spouse. }
