@@ -1,5 +1,5 @@
 # Replace $0 with country entity id
-SELECT ?name ?description ?population ?continentLabel ?capitalLabel ?areaKmSquared ?headOfGovLabel ?headOfStateLabel WHERE {
+SELECT ?name ?description ?population ?continentLabel ?capitalLabel ?areaKmSquared ?headOfGov ?headOfGovLabel ?headOfState ?headOfStateLabel WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
   OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
