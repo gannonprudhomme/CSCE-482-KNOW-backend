@@ -1,8 +1,14 @@
 version: "3.1"
 
 services:
-  web:
+  server:
     build: .
     ports:
       - "8000:8000"
-    container_name: know
+    container_name: know-server
+
+  tests:
+    build:
+      context: .
+      dockerfile: docker/tests/Dockerfile
+    container_name: know-tests

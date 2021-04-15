@@ -24,3 +24,4 @@ pytest-django = "*"
 # Note that you must run this in the first know/ folder
 lint = "pylint know/ rdf/ --load-plugins pylint_django --django-settings-module=know.settings --rcfile=.pylintrc"
 test = "pytest"
+server = "python manage.py runserver"
