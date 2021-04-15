@@ -19,4 +19,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: docker-build
-        run: docker-compose up --build --abort-on-container-exit
+        run: docker-compose up --build --abort-on-container-exit tests
