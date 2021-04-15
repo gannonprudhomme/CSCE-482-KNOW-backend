@@ -1,4 +1,3 @@
-from collections import defaultdict
 from rdf.parser.format_output import format_query, format_date_string
 
 def format_country(response: dict) -> dict:
@@ -19,7 +18,7 @@ def format_country(response: dict) -> dict:
 
     def format_area_and_population(val: str, key: str) -> str:
         if val:
-            if key == "areaKmSquared" or key == "population":
+            if key in ("areaKmSquared", "population"):
                 # Convert to float from string, then convert to int to shave off decimals
                 val = int(float(val))
                 # Make it comma separated string

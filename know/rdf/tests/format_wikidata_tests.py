@@ -43,11 +43,6 @@ class FormatWikidataTests(TestCase):
                             "type": "uri",
                             "value": "http://www.wikidata.org/entity/Q142"
                         },
-                        "territoryLocationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "7th arrondissement of Paris"
-                        },
                         "countryLocationLabel": {
                             "xml:lang": "en",
                             "type": "literal",
@@ -71,11 +66,6 @@ class FormatWikidataTests(TestCase):
             "title": "Eiffel Tower",
             "subtitle": "tower located on the Champ de Mars in Paris, France",
             "entries": {
-                "Territory": [
-                    {
-                        "value": "7th arrondissement of Paris",
-                    },
-                ],
                 "Country": [
                     {
                         "value": "France",

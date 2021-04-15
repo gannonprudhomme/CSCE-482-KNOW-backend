@@ -47,6 +47,15 @@ def _get_value_or_none(data: dict, key: str) -> str:
 
     return None
 
+def _detected_duplicate(val: str, pretty_key: str, entries: dict) -> bool:
+    """ Checks if there is already an entry with this key and value in entries """
+    if pretty_key in entries:
+        # Skip if we've already entered this value
+        for existing_entry in entries[pretty_key]:
+            if existing_entry["value"] == val:
+                return True
+
+    return False
 
 def format_query(
     response: dict, entries_translations: dict, entries_links: dict,
@@ -60,8 +69,8 @@ def format_query(
         Uses `entries_links` to determine the translation between a label column and its
         corresponding entity id column (e.g. "headOfGovLabel": "headOfGov")
 
-        `special_format` is a function that is called once a value is retrieved form a column
-        and allows the function caller to optionally format the value, e.g. if one
+        `special_format` is a function that is called once a value is retrieved form a
+        column and allows the function caller to optionally format the value, e.g. if one
         wanted to format a date into a human-readable format.
     """
 
@@ -81,32 +90,22 @@ def format_query(
             if special_format: # If there's a special_format function provided
                 val = special_format(val, key)
 
-            #if not val: # guard statement
-            #    continue
+            if not val: # guard statement
+                continue
 
-            if val: # If there was a corresponding value for this key
-                # First, check if there's a link corresponding for this value
-                link_col_name = entries_links.get(key)
-                link = None
-                if link_col_name:
-                    link = _get_value_or_none(entry, link_col_name)
+            # First, check if there's a link corresponding for this value
+            link_col_name = entries_links.get(key)
+            link = None
+            if link_col_name:
+                link = _get_value_or_none(entry, link_col_name)
 
-                # Check for duplicates
-                detected_duplicate = False
-                if pretty_key in entries:
-                    # Skip if we've already entered this value
-                    for existing_entry in entries[pretty_key]:
-                        if existing_entry["value"] == val:
-                            detected_duplicate = True
-                            break
-                
-                if detected_duplicate: # Skip duplicates
-                    continue
+            if _detected_duplicate(val, pretty_key, entries): # Skip duplicates
+                continue
 
-                if link: # if there's a link, add it
-                    entries[pretty_key].append({ "value": val, "link": link })
-                else:
-                    # If we can't, just enter the value
-                    entries[pretty_key].append({ "value": val })
+            if link: # if there's a link, add it
+                entries[pretty_key].append({ "value": val, "link": link })
+            else:
+                # If we can't, just enter the value
+                entries[pretty_key].append({ "value": val })
 
     return format_output(name, subtitle, None, dict(entries))
