@@ -100,7 +100,7 @@ class WikidataParser(AbstractParser):
 
     def parse_person(self) -> dict:
         """ Parses a person entity type """
-        query = read_sparql("get_name.sparql", self.entity_id)
+        query = read_sparql("get_person.sparql", self.entity_id)
         return wikidata_sparql_query(query)
 
     def parse_book(self) -> dict:
@@ -120,6 +120,7 @@ class WikidataParser(AbstractParser):
         response = wikidata_sparql_query(query)
 
         return format_country(response)
+        # return response
 
     def parse_landmark(self) -> dict:
         """ Parse a landmark entity type

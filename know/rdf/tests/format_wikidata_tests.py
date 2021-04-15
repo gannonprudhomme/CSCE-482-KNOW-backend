@@ -74,7 +74,6 @@ class FormatWikidataTests(TestCase):
                 "Territory": [
                     {
                         "value": "7th arrondissement of Paris",
-                        "link": "http://www.wikidata.org/entity/Q259463",
                     },
                 ],
                 "Country": [
@@ -122,91 +121,144 @@ class FormatWikidataTests(TestCase):
                         "description": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "country in Western Europe"
+                            "value": "sovereign state in North Africa and Asia"
                         },
                         "name": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "France"
+                            "value": "Egypt"
                         },
                         "population": {
                             "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
                             "type": "literal",
-                            "value": "66628000"
+                            "value": "94798827"
                         },
                         "areaKmSquared": {
                             "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
                             "type": "literal",
-                            "value": "643801"
+                            "value": "1010407.87"
                         },
                         "headOfGov": {
                             "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q3171170"
+                            "value": "http://www.wikidata.org/entity/Q54901515"
                         },
                         "headOfState": {
                             "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q3052772"
+                            "value": "http://www.wikidata.org/entity/Q307871"
                         },
                         "continentLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "Europe"
+                            "value": "Africa"
                         },
                         "capitalLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "Paris"
+                            "value": "Cairo"
                         },
                         "headOfGovLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "Jean Castex"
+                            "value": "Moustafa Madbouly"
                         },
                         "headOfStateLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "Emmanuel Macron"
+                            "value": "Abdel Fattah el-Sisi"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "sovereign state in North Africa and Asia"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Egypt"
+                        },
+                        "population": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "type": "literal",
+                            "value": "94798827"
+                        },
+                        "areaKmSquared": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "type": "literal",
+                            "value": "1010407.87"
+                        },
+                        "headOfGov": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q54901515"
+                        },
+                        "headOfState": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q307871"
+                        },
+                        "continentLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Asia"
+                        },
+                        "capitalLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Cairo"
+                        },
+                        "headOfGovLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Moustafa Madbouly"
+                        },
+                        "headOfStateLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Abdel Fattah el-Sisi"
                         }
                     }
                 ]
             }
         }
 
-        expected ={
-            "title": "France",
-            "subtitle": "country in Western Europe",
+        expected = {
+            "title": "Egypt",
+            "subtitle": "sovereign state in North Africa and Asia",
             "entries": {
                 "Population": [
                     {
-                        "value": "66628000"
-                    }
+                        "value": "94,798,827"
+                    },
                 ],
                 "Continent": [
                     {
-                        "value": "Europe"
+                        "value": "Africa"
+                    },
+                    {
+                        "value": "Asia"
                     }
                 ],
                 "Capital": [
                     {
-                        "value": "Paris"
-                    }
+                        "value": "Cairo"
+                    },
                 ],
                 "Area": [
                     {
-                        "value": "643801 km sq."
-                    }
+                        "value": "1,010,407 km sq."
+                    },
                 ],
                 "Head of Government": [
                     {
-                        "value": "Jean Castex",
-                        "link": "http://www.wikidata.org/entity/Q3171170"
-                    }
+                        "value": "Moustafa Madbouly",
+                        "link": "http://www.wikidata.org/entity/Q54901515"
+                    },
                 ],
                 "Head of State": [
                     {
-                        "value": "Emmanuel Macron",
-                        "link": "http://www.wikidata.org/entity/Q3052772"
-                    }
+                        "value": "Abdel Fattah el-Sisi",
+                        "link": "http://www.wikidata.org/entity/Q307871"
+                    },
                 ]
             }
         }
