@@ -1,5 +1,5 @@
 # Replace $0 with landmark entity id
-SELECT ?name ?description ?territoryLocationLabel ?countryLocationLabel ?inception ?coordinates WHERE {
+SELECT ?name ?description ?territoryLocation ?territoryLocationLabel ?countryLocation ?countryLocationLabel ?inception ?coordinates WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
   OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
