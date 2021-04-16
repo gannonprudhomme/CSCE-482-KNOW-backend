@@ -1,7 +1,11 @@
 from rdf.parser.format_output import format_query, format_date_string
 
 def format_country(response: dict) -> dict:
-    """ Formats a country into the expected output format """
+    """ Formats a country into the expected output format
+        - France: https://www.wikidata.org/wiki/Q142
+        - New Zealand: https://www.wikidata.org/wiki/Q664
+        - Ghana:https://www.wikidata.org/wiki/Q117
+    """
     entries_translations = {
         "population": "Population",
         "continentLabel": "Continent",
@@ -35,7 +39,11 @@ def format_country(response: dict) -> dict:
     )
 
 def format_landmark(response: dict) -> dict:
-    """ Formats a landmark into the expected output format """
+    """ Formats a landmark into the expected output format
+        - Great Pyramid of Giza: https://www.wikidata.org/wiki/Q37200
+        - Taj Mahal: https://www.wikidata.org/wiki/Q9141
+        - Statue of Liberty: https://www.wikidata.org/wiki/Q9202
+    """
     entries_translations = {
         "territoryLocationLabel": "Territory",
         "countryLocationLabel": "Country",

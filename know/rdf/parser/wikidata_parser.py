@@ -14,7 +14,7 @@ RETRY_COUNT = 10 # How many retry attempts we'll make
 RETRY_DELAY = 0.1 # Wait a tenth of a second before retrying
 PERSON_ENTITY_TYPES = ["human"]
 BOOK_ENTITY_TYPES = ["literary work", "novel series"]
-COUNTRY_TYPES = ["country", "soverign state"]
+COUNTRY_TYPES = ["country", "sovereign state"]
 LANDMARK_TYPES = ["landmark", "tourist attraction"]
 
 def wikidata_sparql_query(query: str) -> dict:
