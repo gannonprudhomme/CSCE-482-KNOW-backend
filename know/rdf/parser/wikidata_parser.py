@@ -6,14 +6,14 @@ import requests
 from rdf.parser.abstract_parser import AbstractParser, EntityType
 from rdf.parser.sparql_reader import read_sparql
 from rdf.parser.wikidata_formatter import (
-    format_landmark, format_country,
+    format_landmark, format_country, format_book, format_person
 )
 
 WIKIDATA_ENDPOINT = 'https://query.wikidata.org/sparql'
 RETRY_COUNT = 10 # How many retry attempts we'll make
 RETRY_DELAY = 0.1 # Wait a tenth of a second before retrying
 PERSON_ENTITY_TYPES = ["human"]
-BOOK_ENTITY_TYPES = ["literary work", "novel series"]
+BOOK_ENTITY_TYPES = ["literary work", "novel series", "written work", "book series"]
 COUNTRY_TYPES = ["country", "soverign state"]
 LANDMARK_TYPES = ["landmark", "tourist attraction"]
 
@@ -101,14 +101,15 @@ class WikidataParser(AbstractParser):
     def parse_person(self) -> dict:
         """ Parses a person entity type """
         query = read_sparql("get_person.sparql", self.entity_id)
-        return wikidata_sparql_query(query)
+        response = wikidata_sparql_query(query)
+        return format_person(response)
 
     def parse_book(self) -> dict:
         """ Parses a book entity type """
 
         query = read_sparql("get_book.sparql", self.entity_id)
-        return wikidata_sparql_query(query)
-
+        response = wikidata_sparql_query(query)
+        return format_book(response)
     def parse_country(self) -> dict:
         """ Parse a country entity type
             Examples:

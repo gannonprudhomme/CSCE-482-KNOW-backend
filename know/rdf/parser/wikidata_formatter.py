@@ -55,3 +55,45 @@ def format_landmark(response: dict) -> dict:
         return val
 
     return format_query(response, entries_translations, entries_links, format_date)
+
+def format_book(response: dict) -> dict:
+    """ Formats a book into the expected output format """
+    entries_translations = {
+        "authorLabel": "Author",
+        "name": "Title",
+        "genreLabel": "Genre",
+        "published": "Published"
+    }
+    entries_links = {
+        "authorLabel": "author"
+    }
+    def format_date(val: str, key: str) -> str:
+        # If the key is the publication date, format it into a date string
+        if val and key == "published":
+            return format_date_string(val)
+
+        # For all other keys, leave them alone
+        return val
+    return format_query(response, entries_translations, entries_links, format_date)
+def format_person(response: dict) -> dict:
+    """Format a person into the expected output format """
+    entries_translations = {
+        "name": "Name",
+        "birthDate": "Born",
+        "deathDate": "Died",
+        "occupationLabel": "Occupation",
+        "nationalityLabel": "Nationality",
+        "spouseLabel": "Spouse"
+    }
+    entries_links = {
+        "nationalityLabel": "nationality",
+        "spouseLabel": "spouse"
+    }
+    def format_date(val: str, key: str) -> str:
+        # If the key is the birth or death date, format it into a date string
+        if val and key == "birthDate" or val and key == "deathDate":
+            return format_date_string(val)
+
+        # For all other keys, leave them alone
+        return val
+    return format_query(response, entries_translations, entries_links, format_date)

@@ -1,5 +1,5 @@
 # Replace $0 with person entity id 
-SELECT ?name ?description ?birthDate ?deathDate ?spouseLabel ?nationalityLabel ?occupationLabel WHERE {
+SELECT ?name ?description ?birthDate ?deathDate ?spouse ?spouseLabel ?nationality ?nationalityLabel ?occupationLabel WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
   OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
