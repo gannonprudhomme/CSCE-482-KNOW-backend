@@ -28,7 +28,7 @@ def format_date_string(date_str: str) -> str:
     """
     print(date_str)
     parsed_date = parse(date_str)
-    if parsed_date.year > 2030:
+    if date_str[0] == '-':
         return f"{parsed_date.year} BCE"
 
     # Windows and unix do non-leading zero dates differently, so handle both of them
