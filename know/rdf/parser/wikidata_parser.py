@@ -20,7 +20,7 @@ BOOK_ENTITY_TYPES = [
     "book series",
     "poem"
     ]
-COUNTRY_TYPES = ["country", "soverign state"]
+COUNTRY_TYPES = ["country", "sovereign state"]
 LANDMARK_TYPES = ["landmark", "tourist attraction"]
 
 def wikidata_sparql_query(query: str) -> dict:
