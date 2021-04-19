@@ -1,5 +1,11 @@
+# pylint: disable=too-many-lines
 from unittest import TestCase
-from rdf.parser.wikidata_formatter import format_landmark, format_country
+from rdf.parser.wikidata_formatter import (
+    format_landmark,
+    format_country,
+    format_book,
+    format_person
+)
 
 class FormatWikidataTests(TestCase):
     """ Tests the wikidata formatter functions """
@@ -257,3 +263,339 @@ class FormatWikidataTests(TestCase):
 
         # assert
         self.assertEqual(result, expected)
+    def test_format_person(self):
+        """ Tests format_person """
+        json_input = {
+            "head": {
+                "vars": [
+                    "name",
+                    "description",
+                    "birthDate",
+                    "deathDate",
+                    "spouse",
+                    "spouseLabel",
+                    "nationality",
+                    "nationalityLabel",
+                    "occupationLabel"
+                ]
+            },
+            "results": {
+                "bindings": [
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "1st president of the United States (1732-1799)"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "George Washington"
+                        },
+                        "birthDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1732-02-22T00:00:00Z"
+                        },
+                        "deathDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1799-12-14T00:00:00Z"
+                        },
+                        "spouse": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q191789"
+                        },
+                        "nationality": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q30"
+                        },
+                        "spouseLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Martha Washington"
+                        },
+                        "nationalityLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "United States of America"
+                        },
+                        "occupationLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "politician"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "1st president of the United States (1732-1799)"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "George Washington"
+                        },
+                        "birthDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1732-02-22T00:00:00Z"
+                        },
+                        "deathDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1799-12-14T00:00:00Z"
+                        },
+                        "spouse": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q191789"
+                        },
+                        "nationality": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q161885"
+                        },
+                        "spouseLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Martha Washington"
+                        },
+                        "nationalityLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Great Britain"
+                        },
+                        "occupationLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "politician"
+                        }
+                    }
+                ]
+            }
+        }
+        expected = {
+            "title": "George Washington",
+            "subtitle": "1st president of the United States (1732-1799)",
+            "entries": {
+                "Name": [
+                    {
+                        "value": "George Washington"
+                    }
+                ],
+                "Born": [
+                    {
+                        "value": "February 22, 1732"
+                    }
+                ],
+                "Died": [
+                    {
+                        "value": "December 14, 1799"
+                    }
+                ],
+                "Occupation": [
+                    {
+                        "value": "politician"
+                    }
+                ],
+                "Nationality": [
+                    {
+                        "value": "United States of America",
+                        "link": "http://www.wikidata.org/entity/Q30"
+                    },
+                    {
+                        "value": "Great Britain",
+                        "link": "http://www.wikidata.org/entity/Q161885"
+                    }
+                ],
+                "Spouse": [
+                    {
+                        "value": "Martha Washington",
+                        "link": "http://www.wikidata.org/entity/Q191789"
+                    }
+                ]
+            }
+        }
+        actual = format_person(json_input)
+        self.assertEqual(actual, expected)
+
+    def test_format_book(self):
+        """ Tests format_book """
+        json_input = {
+            "head": {
+                "vars": [
+                    "name",
+                    "description",
+                    "author",
+                    "authorLabel",
+                    "genreLabel",
+                    "published"
+                ]
+            },
+            "results": {
+                "bindings": [
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "fantasy novel by J. K. Rowling"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Harry Potter and the Philosopher's Stone"
+                        },
+                        "author": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q34660"
+                        },
+                        "authorLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "J. K. Rowling"
+                        },
+                        "genreLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "adventure novel"
+                        },
+                        "published": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1997-06-26T00:00:00Z"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "fantasy novel by J. K. Rowling"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Harry Potter and the Philosopher's Stone"
+                        },
+                        "author": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q34660"
+                        },
+                        "authorLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "J. K. Rowling"
+                        },
+                        "genreLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "young adult literature"
+                        },
+                        "published": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1997-06-26T00:00:00Z"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "fantasy novel by J. K. Rowling"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Harry Potter and the Philosopher's Stone"
+                        },
+                        "author": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q34660"
+                        },
+                        "authorLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "J. K. Rowling"
+                        },
+                        "genreLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "speculative fiction novel"
+                        },
+                        "published": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1997-06-26T00:00:00Z"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "fantasy novel by J. K. Rowling"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Harry Potter and the Philosopher's Stone"
+                        },
+                        "author": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q34660"
+                        },
+                        "authorLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "J. K. Rowling"
+                        },
+                        "genreLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "young adult novel"
+                        },
+                        "published": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1997-06-26T00:00:00Z"
+                        }
+                    }
+                ]
+            }
+        }
+        expected = {
+            "title": "Harry Potter and the Philosopher's Stone",
+            "subtitle": "fantasy novel by J. K. Rowling",
+            "entries": {
+                "Author": [
+                    {
+                        "value": "J. K. Rowling",
+                        "link": "http://www.wikidata.org/entity/Q34660"
+                    }
+                ],
+                "Title": [
+                    {
+                        "value": "Harry Potter and the Philosopher's Stone"
+                    }
+                ],
+                "Genre": [
+                    {
+                        "value": "adventure novel"
+                    },
+                    {
+                        "value": "young adult literature"
+                    },
+                    {
+                        "value": "speculative fiction novel"
+                    },
+                    {
+                        "value": "young adult novel"
+                    }
+                ],
+                "Published": [
+                    {
+                        "value": "June 26, 1997"
+                    }
+                ]
+            }
+        }
+        actual = format_book(json_input)
+        self.assertEqual(actual, expected)

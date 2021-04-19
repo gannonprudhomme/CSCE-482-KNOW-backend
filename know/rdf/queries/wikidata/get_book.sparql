@@ -1,5 +1,5 @@
 # Replace $0 with book entity id
-SELECT ?name ?description ?authorLabel ?genreLabel ?published WHERE {
+SELECT ?name ?description ?author ?authorLabel ?genreLabel ?published WHERE {
   BIND(wd:$0 AS ?entity)
   OPTIONAL { ?entity rdfs:label ?name. filter (lang(?name) = "en")}
   OPTIONAL { ?entity schema:description ?description. filter (lang(?description) = "en")}
