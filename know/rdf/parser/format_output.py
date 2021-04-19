@@ -26,7 +26,6 @@ def format_date_string(date_str: str) -> str:
     """ Converts a date string like 2019-09-01T07:58:30.996+0200 into
         September 1, 2019
     """
-    print(date_str)
     parsed_date = parse(date_str)
     if date_str[0] == '-':
         return f"{parsed_date.year} BCE"
