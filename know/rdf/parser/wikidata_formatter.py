@@ -67,7 +67,7 @@ def format_landmark(response: dict) -> dict:
 def format_book(response: dict) -> dict:
     """ Formats a book into the expected output format
         - Harry Potter: https://www.wikidata.org/wiki/Q8337
-        - To a Mouse: https://www.wikidata.org/wiki/Q3307327
+        - Dune: https://www.wikidata.org/wiki/Q190192
         - A Tale of Two Cities: https://www.wikidata.org/wiki/Q308918
     """
     entries_translations = {
