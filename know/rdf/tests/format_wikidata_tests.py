@@ -285,26 +285,71 @@ class FormatWikidataTests(TestCase):
                         "description": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
+                            "value": "1st president of the United States (1732-1799)"
                         },
                         "name": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "William Blake"
+                            "value": "George Washington"
                         },
                         "birthDate": {
                             "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
                             "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
+                            "value": "1732-02-22T00:00:00Z"
                         },
                         "deathDate": {
                             "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
                             "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
+                            "value": "1799-12-14T00:00:00Z"
                         },
                         "spouse": {
                             "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
+                            "value": "http://www.wikidata.org/entity/Q191789"
+                        },
+                        "nationality": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q30"
+                        },
+                        "spouseLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "Martha Washington"
+                        },
+                        "nationalityLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "United States of America"
+                        },
+                        "occupationLabel": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "politician"
+                        }
+                    },
+                    {
+                        "description": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "1st president of the United States (1732-1799)"
+                        },
+                        "name": {
+                            "xml:lang": "en",
+                            "type": "literal",
+                            "value": "George Washington"
+                        },
+                        "birthDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1732-02-22T00:00:00Z"
+                        },
+                        "deathDate": {
+                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                            "type": "literal",
+                            "value": "1799-12-14T00:00:00Z"
+                        },
+                        "spouse": {
+                            "type": "uri",
+                            "value": "http://www.wikidata.org/entity/Q191789"
                         },
                         "nationality": {
                             "type": "uri",
@@ -313,7 +358,7 @@ class FormatWikidataTests(TestCase):
                         "spouseLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "Catherine Blake"
+                            "value": "Martha Washington"
                         },
                         "nationalityLabel": {
                             "xml:lang": "en",
@@ -323,1025 +368,50 @@ class FormatWikidataTests(TestCase):
                         "occupationLabel": {
                             "xml:lang": "en",
                             "type": "literal",
-                            "value": "writer"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "writer"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "poet"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "poet"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "printer"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "printer"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "engraver"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "engraver"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "illustrator"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "illustrator"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "painter"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "painter"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "theologian"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "theologian"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "graphic artist"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "graphic artist"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "collector"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "collector"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "philosopher"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "philosopher"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q161885"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Great Britain"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "lithographer"
-                        }
-                    },
-                    {
-                        "description": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "English Romantic poet and artist (1757-1827)"
-                        },
-                        "name": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "William Blake"
-                        },
-                        "birthDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1757-11-28T00:00:00Z"
-                        },
-                        "deathDate": {
-                            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-                            "type": "literal",
-                            "value": "1827-08-12T00:00:00Z"
-                        },
-                        "spouse": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q5052545"
-                        },
-                        "nationality": {
-                            "type": "uri",
-                            "value": "http://www.wikidata.org/entity/Q174193"
-                        },
-                        "spouseLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "Catherine Blake"
-                        },
-                        "nationalityLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "United Kingdom of Great Britain and Ireland"
-                        },
-                        "occupationLabel": {
-                            "xml:lang": "en",
-                            "type": "literal",
-                            "value": "lithographer"
+                            "value": "politician"
                         }
                     }
                 ]
             }
         }
         expected = {
-            "title": "William Blake",
-            "subtitle": "English Romantic poet and artist (1757-1827)",
+            "title": "George Washington",
+            "subtitle": "1st president of the United States (1732-1799)",
             "entries": {
                 "Name": [
                     {
-                        "value": "William Blake"
+                        "value": "George Washington"
                     }
                 ],
                 "Born": [
                     {
-                        "value": "November 28, 1757"
+                        "value": "February 22, 1732"
                     }
                 ],
                 "Died": [
                     {
-                        "value": "August 12, 1827"
+                        "value": "December 14, 1799"
                     }
                 ],
                 "Occupation": [
                     {
-                        "value": "writer"
-                    },
-                    {
-                        "value": "poet"
-                    },
-                    {
-                        "value": "printer"
-                    },
-                    {
-                        "value": "engraver"
-                    },
-                    {
-                        "value": "illustrator"
-                    },
-                    {
-                        "value": "painter"
-                    },
-                    {
-                        "value": "theologian"
-                    },
-                    {
-                        "value": "graphic artist"
-                    },
-                    {
-                        "value": "collector"
-                    },
-                    {
-                        "value": "philosopher"
-                    },
-                    {
-                        "value": "lithographer"
+                        "value": "politician"
                     }
                 ],
                 "Nationality": [
                     {
-                        "value": "Great Britain",
-                        "link": "http://www.wikidata.org/entity/Q161885"
+                        "value": "United States of America",
+                        "link": "http://www.wikidata.org/entity/Q30"
                     },
                     {
-                        "value": "United Kingdom of Great Britain and Ireland",
-                        "link": "http://www.wikidata.org/entity/Q174193"
+                        "value": "Great Britain",
+                        "link": "http://www.wikidata.org/entity/Q161885"
                     }
                 ],
                 "Spouse": [
                     {
-                        "value": "Catherine Blake",
-                        "link": "http://www.wikidata.org/entity/Q5052545"
+                        "value": "Martha Washington",
+                        "link": "http://www.wikidata.org/entity/Q191789"
                     }
                 ]
             }

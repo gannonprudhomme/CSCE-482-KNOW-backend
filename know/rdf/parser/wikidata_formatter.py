@@ -65,7 +65,11 @@ def format_landmark(response: dict) -> dict:
     return format_query(response, entries_translations, entries_links, format_date)
 
 def format_book(response: dict) -> dict:
-    """ Formats a book into the expected output format """
+    """ Formats a book into the expected output format
+        - Harry Potter: https://www.wikidata.org/wiki/Q8337
+        - To a Mouse: https://www.wikidata.org/wiki/Q3307327
+        - A Tale of Two Cities: https://www.wikidata.org/wiki/Q308918
+    """
     entries_translations = {
         "authorLabel": "Author",
         "name": "Title",
@@ -84,7 +88,11 @@ def format_book(response: dict) -> dict:
         return val
     return format_query(response, entries_translations, entries_links, format_date)
 def format_person(response: dict) -> dict:
-    """Format a person into the expected output format """
+    """Format a person into the expected output format
+        - George Washington: https://www.wikidata.org/wiki/Q23
+        - William Blake: https://www.wikidata.org/wiki/Q41513
+        - Albert Einstein: https://www.wikidata.org/wiki/Q937
+    """
     entries_translations = {
         "name": "Name",
         "birthDate": "Born",

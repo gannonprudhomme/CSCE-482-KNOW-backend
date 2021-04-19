@@ -13,7 +13,13 @@ WIKIDATA_ENDPOINT = 'https://query.wikidata.org/sparql'
 RETRY_COUNT = 10 # How many retry attempts we'll make
 RETRY_DELAY = 0.1 # Wait a tenth of a second before retrying
 PERSON_ENTITY_TYPES = ["human"]
-BOOK_ENTITY_TYPES = ["literary work", "novel series", "written work", "book series"]
+BOOK_ENTITY_TYPES = [
+    "literary work",
+    "novel series",
+    "written work",
+    "book series",
+    "poem"
+    ]
 COUNTRY_TYPES = ["country", "soverign state"]
 LANDMARK_TYPES = ["landmark", "tourist attraction"]
 
