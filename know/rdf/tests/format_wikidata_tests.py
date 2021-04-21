@@ -88,8 +88,6 @@ class FormatWikidataTests(TestCase):
 
         # act
         result = format_landmark(json_input)
-        print(repr(expected))
-        print(repr(result))
 
         # assert
         self.assertEqual(result, expected)
@@ -378,11 +376,6 @@ class FormatWikidataTests(TestCase):
             "title": "George Washington",
             "subtitle": "1st president of the United States (1732-1799)",
             "entries": {
-                "Name": [
-                    {
-                        "value": "George Washington"
-                    }
-                ],
                 "Born": [
                     {
                         "value": "February 22, 1732"
@@ -569,11 +562,6 @@ class FormatWikidataTests(TestCase):
                     {
                         "value": "J. K. Rowling",
                         "link": "http://www.wikidata.org/entity/Q34660"
-                    }
-                ],
-                "Title": [
-                    {
-                        "value": "Harry Potter and the Philosopher's Stone"
                     }
                 ],
                 "Genre": [
