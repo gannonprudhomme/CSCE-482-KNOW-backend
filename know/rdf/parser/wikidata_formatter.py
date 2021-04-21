@@ -69,10 +69,11 @@ def format_book(response: dict) -> dict:
         - Harry Potter: https://www.wikidata.org/wiki/Q8337
         - Dune: https://www.wikidata.org/wiki/Q190192
         - A Tale of Two Cities: https://www.wikidata.org/wiki/Q308918
+        - Hunger Games: https://www.wikidata.org/wiki/Q11678
     """
     entries_translations = {
         "authorLabel": "Author",
-        "name": "Title",
+        # "name": "Title",
         "genreLabel": "Genre",
         "published": "Published"
     }
@@ -94,7 +95,7 @@ def format_person(response: dict) -> dict:
         - Albert Einstein: https://www.wikidata.org/wiki/Q937
     """
     entries_translations = {
-        "name": "Name",
+        # "name": "Name",
         "birthDate": "Born",
         "deathDate": "Died",
         "occupationLabel": "Occupation",

@@ -18,8 +18,8 @@ BOOK_ENTITY_TYPES = [
     "novel series",
     "written work",
     "book series",
-    "poem"
-    ]
+    "poem",
+]
 COUNTRY_TYPES = ["country", "sovereign state"]
 LANDMARK_TYPES = ["landmark", "tourist attraction"]
 
